@@ -172,13 +172,13 @@ with tf.Session() as sess:
                     add = 1000
 
                     for it in range(test_iteration):
-                        test_batch_x1 = Test_rna_data_seq[test_pre_index:test_pre_index+batch_size]
-                        test_batch_z1 = Test_rna_lengths_seq[test_pre_index:test_pre_index+batch_size]
-                        test_batch_x2 = Test_rna_data_str[test_pre_index:test_pre_index+batch_size]
-                        test_batch_z2 = Test_rna_lengths_str[test_pre_index:test_pre_index+batch_size]
-                        test_batch_y = Test_rna_labels[test_pre_index:test_pre_index+batch_size]
-                        test_batch_x3 = Test_feature_data[test_pre_index:test_pre_index+batch_size]
-                        test_batch_z3 = Test_feature_lengths[test_pre_index:test_pre_index+batch_size]
+                        test_batch_x1 = Test_rna_data_seq[test_pre_index:test_pre_index+add]
+                        test_batch_z1 = Test_rna_lengths_seq[test_pre_index:test_pre_index+add]
+                        test_batch_x2 = Test_rna_data_str[test_pre_index:test_pre_index+add]
+                        test_batch_z2 = Test_rna_lengths_str[test_pre_index:test_pre_index+add]
+                        test_batch_y = Test_rna_labels[test_pre_index:test_pre_index+add]
+                        test_batch_x3 = Test_feature_data[test_pre_index:test_pre_index+add]
+                        test_batch_z3 = Test_feature_lengths[test_pre_index:test_pre_index+add]
                         test_pre_index = test_pre_index + add
 
                         test_feed_dict = {
